@@ -1,0 +1,15 @@
+# 时钟约束 - 50MHz主时钟
+NET "clk_50m" LOC = P56 | IOSTANDARD = LVCMOS33;
+NET "clk_50m" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD "sys_clk_pin" 50 MHz HIGH 50%;
+
+# 复位信号
+NET "rst_n" LOC = P111 | IOSTANDARD = LVCMOS33 | PULLUP;
+
+# UART接口
+NET "uart_rx" LOC = P114 | IOSTANDARD = LVCMOS33;
+NET "uart_tx" LOC = P112 | IOSTANDARD = LVCMOS33;
+
+NET "led" LOC = P115 | IOSTANDARD = LVCMOS33;
+
+NET "uart1_tx" LOC = P116 | IOSTANDARD = LVCMOS33;

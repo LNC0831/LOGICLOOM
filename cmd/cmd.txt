@@ -1,0 +1,27 @@
+IMME 10       ; 0A - 将10放入Reg0
+MOV Reg0 OUTPUT ; 86 - 输出10
+MOV Reg0 Reg1 ; 81 - Reg1 = 10
+IMME 4        ; 04 - 将4放入Reg0
+MOV Reg0 OUTPUT ; 86 - 输出4
+MOV Reg0 Reg2 ; 82 - Reg2 = 4
+SUB           ; 45 - Reg3 = 6
+MOV Reg3 OUTPUT ; 9E - 输出6
+MOV Reg3 Reg1 ; 99 - Reg1 = 6 
+IMME 3        ; 03 - 将3放入Reg0
+MOV Reg0 OUTPUT ; 86 - 输出3
+MOV Reg0 Reg2 ; 82 - Reg2 = 3
+ADD           ; 44 - Reg3 = 6 + 3 = 9
+MOV Reg3 OUTPUT ; 9E - 输出9
+
+
+
+IMME 4        ; 04 - 将4放入Reg0
+MOV Reg0 Reg1 ; 81 - Reg1 = 4
+IMME 9        ; 09 - 将9放入Reg0
+MOV Reg0 Reg2 ; 82 - Reg2 = 9
+SUB           ; 45 - Reg3 = 4 - 9 = -5 ≤ 0
+IMME 8        ; 08 - 跳转地址8
+LTEQ0         ; C3 - Reg3≤0，会跳转
+IMME 99       ; 63 - 被跳过
+IMME 28       ; 1C - 地址8：将28放入Reg0
+MOV Reg0 OUTPUT ; 86 - 输出28

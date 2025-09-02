@@ -1,0 +1,83 @@
+module COND (clk, rst, condition, \input , \output );
+  parameter UUID = 0;
+  parameter NAME = "";
+  input wire clk;
+  input wire rst;
+
+  input  wire [7:0] condition;
+  input  wire [7:0] \input ;
+  output  wire [0:0] \output ;
+  
+  
+    wire [0:0] wire_0;
+  wire [0:0] wire_1;
+  wire [7:0] wire_2;
+  assign wire_2 = \input ;
+  wire [0:0] wire_3;
+  wire [0:0] wire_4;
+  wire [0:0] wire_5;
+  wire [0:0] wire_6;
+  wire [0:0] wire_7;
+  wire [0:0] wire_8;
+  wire [0:0] wire_8_0;
+  wire [0:0] wire_8_1;
+  wire [0:0] wire_8_2;
+  wire [0:0] wire_8_3;
+  wire [0:0] wire_8_4;
+  wire [0:0] wire_8_5;
+  wire [0:0] wire_8_6;
+  wire [0:0] wire_8_7;
+  assign wire_8 = wire_8_0|wire_8_1|wire_8_2|wire_8_3|wire_8_4|wire_8_5|wire_8_6|wire_8_7;
+  assign \output  = wire_8;
+  wire [0:0] wire_9;
+  wire [0:0] wire_10;
+  wire [0:0] wire_11;
+  wire [0:0] wire_12;
+  wire [0:0] wire_13;
+  wire [0:0] wire_14;
+  wire [0:0] wire_15;
+  wire [0:0] wire_16;
+  wire [0:0] wire_17;
+  wire [0:0] wire_18;
+  wire [0:0] wire_19;
+  wire [0:0] wire_20;
+  wire [0:0] wire_21;
+  wire [0:0] wire_22;
+  wire [0:0] wire_23;
+  wire [0:0] wire_24;
+  wire [0:0] wire_25;
+  wire [0:0] wire_26;
+  wire [0:0] wire_27;
+  wire [7:0] wire_28;
+  assign wire_28 = condition;
+  wire [0:0] wire_29;
+  wire [0:0] wire_30;
+  wire [0:0] wire_31;
+  wire [0:0] wire_32;
+
+  TC_Splitter8 # (.UUID(64'd1626108248391372479 ^ UUID)) Splitter8_0 (.in(wire_28), .out0(wire_16), .out1(wire_23), .out2(wire_32), .out3(), .out4(), .out5(), .out6(), .out7());
+  TC_Decoder3 # (.UUID(64'd664719945811842615 ^ UUID)) Decoder3_1 (.dis(1'd0), .sel0(wire_16), .sel1(wire_23), .sel2(wire_32), .out0(wire_5), .out1(wire_18), .out2(wire_15), .out3(wire_24), .out4(wire_17), .out5(wire_11), .out6(wire_31), .out7(wire_1));
+  TC_Splitter8 # (.UUID(64'd3409271623388678653 ^ UUID)) Splitter8_2 (.in(wire_2), .out0(wire_12), .out1(wire_26), .out2(wire_9), .out3(wire_0), .out4(wire_27), .out5(wire_29), .out6(wire_14), .out7(wire_3));
+  TC_Or3 # (.UUID(64'd4544219891533489094 ^ UUID), .BIT_WIDTH(64'd1)) Or3_3 (.in0(wire_12), .in1(wire_26), .in2(wire_9), .out(wire_6));
+  TC_Or3 # (.UUID(64'd812029084129003057 ^ UUID), .BIT_WIDTH(64'd1)) Or3_4 (.in0(wire_0), .in1(wire_27), .in2(wire_29), .out(wire_21));
+  TC_Or # (.UUID(64'd3906001498225346400 ^ UUID), .BIT_WIDTH(64'd1)) Or_5 (.in0(wire_14), .in1(wire_3), .out(wire_19));
+  TC_Or3 # (.UUID(64'd2236180109743473341 ^ UUID), .BIT_WIDTH(64'd1)) Or3_6 (.in0(wire_6), .in1(wire_21), .in2(wire_19), .out(wire_7));
+  TC_Not # (.UUID(64'd2732009158243364202 ^ UUID), .BIT_WIDTH(64'd1)) Not_7 (.in(wire_7), .out(wire_4));
+  TC_Switch # (.UUID(64'd1355124367183916583 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_8 (.en(wire_18), .in(wire_4), .out(wire_8_0));
+  TC_Switch # (.UUID(64'd2343652008544335172 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_9 (.en(wire_15), .in(wire_3), .out(wire_8_2));
+  TC_Or # (.UUID(64'd3524322528432577362 ^ UUID), .BIT_WIDTH(64'd1)) Or_10 (.in0(wire_4), .in1(wire_3), .out(wire_20));
+  TC_Switch # (.UUID(64'd1512187370760949314 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_11 (.en(wire_24), .in(wire_20), .out(wire_8_1));
+  TC_Switch # (.UUID(64'd1404402443833340378 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_12 (.en(wire_17), .in(wire_30), .out(wire_8_6));
+  TC_Constant # (.UUID(64'd4049127725879294253 ^ UUID), .BIT_WIDTH(64'd1), .value(1'd1)) On_13 (.out(wire_30));
+  TC_Constant # (.UUID(64'd167062377107786211 ^ UUID), .BIT_WIDTH(64'd1), .value(1'd0)) Off_14 (.out(wire_22));
+  TC_Switch # (.UUID(64'd3190015809445638485 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_15 (.en(wire_5), .in(wire_22), .out(wire_8_7));
+  TC_Switch # (.UUID(64'd1801256342584983417 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_16 (.en(wire_11), .in(wire_7), .out(wire_8_3));
+  TC_Or # (.UUID(64'd1019657907615878222 ^ UUID), .BIT_WIDTH(64'd1)) Or_17 (.in0(wire_4), .in1(wire_10), .out(wire_25));
+  TC_Switch # (.UUID(64'd4479935552462623508 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_18 (.en(wire_31), .in(wire_25), .out(wire_8_4));
+  TC_Switch # (.UUID(64'd2638523907705458315 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_19 (.en(wire_1), .in(wire_10), .out(wire_8_5));
+  TC_And # (.UUID(64'd2181256102390187462 ^ UUID), .BIT_WIDTH(64'd1)) And_20 (.in0(wire_7), .in1(wire_13), .out(wire_10));
+  TC_Not # (.UUID(64'd183784368915722352 ^ UUID), .BIT_WIDTH(64'd1)) Not_21 (.in(wire_3), .out(wire_13));
+
+
+
+endmodule

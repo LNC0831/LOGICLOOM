@@ -1,0 +1,2044 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Xor.v" into library work
+Parsing module <TC_Xor>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v" into library work
+Parsing module <TC_Switch>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v" into library work
+Parsing module <TC_Splitter8>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v" into library work
+Parsing module <TC_Register>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or3.v" into library work
+Parsing module <TC_Or3>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v" into library work
+Parsing module <TC_Or>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v" into library work
+Parsing module <TC_Not>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Nor.v" into library work
+Parsing module <TC_Nor>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Neg.v" into library work
+Parsing module <TC_Neg>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Decoder3.v" into library work
+Parsing module <TC_Decoder3>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v" into library work
+Parsing module <TC_Constant>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_And.v" into library work
+Parsing module <TC_And>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Add.v" into library work
+Parsing module <TC_Add>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v" into library work
+Parsing module <RegisterPlus>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" into library work
+Parsing module <DEC>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" into library work
+Parsing module <COND>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Mux.v" into library work
+Parsing module <TC_Mux>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Counter.v" into library work
+Parsing module <TC_Counter>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\turing\CPU.v" into library work
+Parsing module <CPU>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\src\uart_process.v" into library work
+Parsing module <uart_data_processor>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\src\uart_packet_transmitter.v" into library work
+Parsing module <uart_packet_transmitter>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\src\clk_test.v" into library work
+Parsing module <clock_divider_50m_to_2>.
+Analyzing Verilog file "F:\Xiaochuan_Project\TC\src\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "F:\Xiaochuan_Project\TC\src\top.v" Line 63: Port input_8bit is not connected to this instance
+
+Elaborating module <top>.
+
+Elaborating module <clock_divider_50m_to_2>.
+
+Elaborating module <uart_packet_transmitter>.
+WARNING:HDLCompiler:189 - "F:\Xiaochuan_Project\TC\src\top.v" Line 37: Size mismatch in connection of port <data_03>. Formal port size is 8-bit while actual signal size is 1-bit.
+
+Elaborating module <CPU>.
+
+Elaborating module <TC_Splitter8(UUID=64'b01100000101000111100111000101101101110011010011010100010100011)>.
+
+Elaborating module <TC_Decoder3(UUID=64'b010110110011000100011100010000001010101001110001000111010111110)>.
+
+Elaborating module <TC_Decoder3(UUID=64'b01110010110100011111101101000000001111011011000010011010000110)>.
+
+Elaborating module <TC_Switch(UUID=64'b010010000011001010101000000000000010010111010011101010111110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Mux(UUID=64'b0101000001011101011011100000011110110011011100110111111101100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Counter(UUID=64'b010010010111110110001010011100000110101100011100001011100011111,BIT_WIDTH=64'b01000,count=8'b01)>.
+
+Elaborating module <TC_Mux(UUID=64'b011100110110110111101100101110000101000100000101011000011010110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011010111110110001110011110110010101011100101000010000101110101,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b010101111001001111010011110100100101000010110110001111010001001,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b010011010010010110000110011010100000010011100011101011111100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <DEC(UUID=64'b011111001001111001110111011110010101010000010110111100001101)>.
+
+Elaborating module <TC_Splitter8(UUID=64'b0110010110010110101011111110111111001100111111101011110011110)>.
+
+Elaborating module <TC_Nor(UUID=64'b0101101011010110001010010001110101010010000000101101110010000,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_And(UUID=64'b011001101011110010110111111101011000111001011011110111000111110,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Xor(UUID=64'b0110000101011110101001010001100111001000110110011101110111010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Xor(UUID=64'b010100100001101101011101011001110110110010100011101011111001101,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_And(UUID=64'b0110110110010110101101000110101011000100010101010000010010010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_And(UUID=64'b01101110110111111100001101111001100000001110110100001010000010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <ALU(UUID=64'b010110001110100101011100010000101000011110010011011101011110001)>.
+
+Elaborating module <TC_Or(UUID=64'b010001000111100000101011001011101001001111111010010011100011001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b011010111001010001101101000000010110000010111000111100101000011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b010001111111001101011010100111100000100011010000111110101010000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Or(UUID=64'b01010011001110101110000001100110001001100111111001011001011111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b011101000111100111000101101111101011110101010011100001011101001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Or(UUID=64'b0111110101011010111010101001110111111001001110001110010111011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b01111111110010100110110111000111001011000001100111110100101,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b010010100100011110100101100101000010000100001011011111001000011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Not(UUID=64'b01011000111011111010001000010011100110000101111000111100100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Or(UUID=64'b01110111010010010101101110011111010010101001100011011101000101,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Splitter8(UUID=64'b0101010111110011100100100000110001111011110011000110111000010)>.
+
+Elaborating module <TC_Switch(UUID=64'b01001001110001101010110011011000100001011010101100100100000111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b010100100001001110000100100000110100000100001111110110010011111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011101001001101111111001111000010000101110101000010010111000111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b010000100000010011111011110010001100000101101111111011111110000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011011100010001111110010001110011010000100100010001110100100010,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011000100100001110000101000001001101110100110010111110101011100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011111111011110001110001101001100010000011011000111011110101001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b0100000101010000110001101111100101010010010010111001110111001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Decoder3(UUID=64'b01111010100000010011000010000110011101111011011011011001100)>.
+
+Elaborating module <TC_Switch(UUID=64'b010000000100111111110111011001011111101100000001101110101101111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011001010011001010100111000101110000111000011111111110010001001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011101000111011111110000000101000001111000111111000100100000000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b010100001010011100000011010011101000101101111110000000100010101,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Add(UUID=64'b010111000101100000000100000100001010100111011100010111000101011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Add(UUID=64'b0111111001101100001110100001110101000000011111110111001011111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b010010011001111101111001001111100110111001000000100010000010111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b01000000100000101100100111011010001111010100100100100111100110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b0100110011100010101101100010011110110111110101111100010111010,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Neg(UUID=64'b011101011000110110100100111001111011000100100011100011001100101,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b0100111001101110100110111110011100110011111000110101100001111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b011010111011011100000110100111110011100000101000110101000011110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Switch(UUID=64'b010001100110101100000110100001100101010100110001011010110000110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <COND(UUID=64'b010111000001111111110000101111100001001101000101101101100111000)>.
+
+Elaborating module <TC_Splitter8(UUID=64'b011100010011110111000001000100100010110000100011001010110000111)>.
+
+Elaborating module <TC_Decoder3(UUID=64'b010011100110110011101110001101111011100100110011000110100001111)>.
+
+Elaborating module <TC_Splitter8(UUID=64'b0101011111110100100010010101111111010001000001001011000101)>.
+
+Elaborating module <TC_Or3(UUID=64'b01000100011111101101111011010101001001101111001111100011111110,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Or3(UUID=64'b010010101001011000100000111100101011011011010010101110100001001,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Or(UUID=64'b01100000111011000111111111010111111000011111110101110001011000,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Or3(UUID=64'b011000100000111011110011010100101001110101011110001100110000101,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Not(UUID=64'b0101111100101111100111000010111000001100101110111011001010010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b011110011000001101001100011000110101101110110111111010100011111,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b0111010001001101010110100101010101111110010001010111001111100,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Or(UUID=64'b01111011100111000100001111010110110100100000111000000001101010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b011101011110011101001100011100111010101101010110001010101111010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b011110101110010100010001100101111111011110000101010101011100010,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Constant(UUID=64'b01011000111110100111000110100110101110100110101010001000010101,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Constant(UUID=64'b010110001011110011111100000011111000011011101010101001011011011,BIT_WIDTH=64'b01,value=1'b0)>.
+
+Elaborating module <TC_Switch(UUID=64'b01001001010110011100010010100100100010000011110101001101101,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b011011011110000101000010100011010101000100100001010010001000001,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Or(UUID=64'b010000000101001011101010010100111100110011111100001011101110110,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b01000000100100000101011111100100111100100011110100100000101100,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Switch(UUID=64'b0101010010010000100111101110010110011100010100001010110110011,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_And(UUID=64'b011000001001010100110001000000101000010101111000001111011111110,BIT_WIDTH=64'b01)>.
+
+Elaborating module <TC_Not(UUID=64'b010110010000011000101101011011111100001110111110110101101001000,BIT_WIDTH=64'b01)>.
+
+Elaborating module <RegisterPlus(UUID=64'b01101111110010100010101000110010110011010101101110010000110101)>.
+
+Elaborating module <TC_Register(UUID=64'b01101111110010100010101000110010110011010101101110010000110100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b01101111110010100010101000110010110011010101101110010000110111,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b010101000111011110111100000001010011101100110001100011001111011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <RegisterPlus(UUID=64'b011110011111010010101001101111001000000110011101111111001100111)>.
+
+Elaborating module <TC_Register(UUID=64'b011110011111010010101001101111001000000110011101111111001100110,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b011110011111010010101001101111001000000110011101111111001100101,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b0110100110011000000000101000001101110000000001101110000101001,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <RegisterPlus(UUID=64'b0110001110110011110010000011000110001101011000110000001000001)>.
+
+Elaborating module <TC_Register(UUID=64'b0110001110110011110010000011000110001101011000110000001000000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b0110001110110011110010000011000110001101011000110000001000011,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b011110110111111001011011000100000011111011000100100001000001111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <RegisterPlus(UUID=64'b010100010001101111110011111101000100001101111100011111010101001)>.
+
+Elaborating module <TC_Register(UUID=64'b010100010001101111110011111101000100001101111100011111010101000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b010100010001101111110011111101000100001101111100011111010101011,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b01100101000100101011010111010000001111011100000001110011100111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <RegisterPlus(UUID=64'b01110101110011010110011011111101000011100001011010010101001010)>.
+
+Elaborating module <TC_Register(UUID=64'b01110101110011010110011011111101000011100001011010010101001011,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b01110101110011010110011011111101000011100001011010010101001000,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b010110010111010000011010011000101101101010010111000011100000100,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <RegisterPlus(UUID=64'b011110110110011111010010110100101011011011111100111101111110110)>.
+
+Elaborating module <TC_Register(UUID=64'b011110110110011111010010110100101011011011111100111101111110111,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <TC_Constant(UUID=64'b011110110110011111010010110100101011011011111100111101111110100,BIT_WIDTH=64'b01,value=1'b1)>.
+
+Elaborating module <TC_Switch(UUID=64'b0110001111010101111011110011101110101101100000101100110111000,BIT_WIDTH=64'b01000)>.
+
+Elaborating module <uart_data_processor>.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 91: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 99: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 106: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 108: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 111: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 114: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 127: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 164: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 173: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 176: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 184: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 186: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 189: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 192: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 202: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 319: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "F:\Xiaochuan_Project\TC\src\uart_process.v" Line 266: Assignment to rx_done_reg ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "F:\Xiaochuan_Project\TC\src\top.v" Line 30: Input port data_04[7] is not connected on this instance
+WARNING:HDLCompiler:552 - "F:\Xiaochuan_Project\TC\src\top.v" Line 63: Input port input_8bit[7] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "F:\Xiaochuan_Project\TC\src\top.v".
+WARNING:Xst:2898 - Port 'data_04', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_05', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_06', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_07', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_08', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_09', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_10', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_11', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_12', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_13', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_14', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_15', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_16', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_17', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_18', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_19', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_20', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_21', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_22', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'data_23', unconnected in block instance 'u_uart_transmitter', is tied to GND.
+WARNING:Xst:2898 - Port 'input_8bit', unconnected in block instance 'CPU_inst0', is tied to GND.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\src\top.v" line 30: Output port <tx_busy> of the instance <u_uart_transmitter> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <clock_divider_50m_to_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\src\clk_test.v".
+        COUNTER_MAX = 12499999
+    Found 24-bit register for signal <counter>.
+    Found 1-bit register for signal <clk_2hz>.
+    Found 24-bit adder for signal <counter[23]_GND_2_o_add_1_OUT> created at line 23.
+    Found 24-bit comparator greater for signal <n0001> created at line 17
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <clock_divider_50m_to_2> synthesized.
+
+Synthesizing Unit <uart_packet_transmitter>.
+    Related source file is "F:\Xiaochuan_Project\TC\src\uart_packet_transmitter.v".
+        CLK_FREQ = 50000000
+        BAUD_RATE = 115200
+        PACKET_INTERVAL_MS = 20
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy_dummy> equivalent to <packet_data> has been removed
+    Register <packet_data_dummy> equivalent to <packet_data> has been removed
+    Found 1-bit register for signal <uart_tx>.
+    Found 64-bit register for signal <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy>.
+    Found 9-bit register for signal <baud_counter>.
+    Found 3-bit register for signal <state>.
+    Found 3-bit register for signal <bit_index>.
+    Found 5-bit register for signal <byte_index>.
+    Found 8-bit register for signal <current_byte>.
+    Found 20-bit register for signal <timer_20ms>.
+    Found 1-bit register for signal <timer_overflow>.
+    Found 1-bit register for signal <baud_tick>.
+    Found 1-bit register for signal <packet_data>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk_50m (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 20-bit adder for signal <timer_20ms[19]_GND_3_o_add_1_OUT> created at line 83.
+    Found 9-bit adder for signal <baud_counter[8]_GND_3_o_add_5_OUT> created at line 99.
+    Found 3-bit adder for signal <bit_index[2]_GND_3_o_add_21_OUT> created at line 214.
+    Found 5-bit adder for signal <byte_index[4]_GND_3_o_add_24_OUT> created at line 227.
+    Found 504-bit shifter logical right for signal <n0091> created at line 229
+    Found 1-bit 8-to-1 multiplexer for signal <bit_index[2]_current_byte[7]_Mux_20_o> created at line 212.
+    Found 20-bit comparator lessequal for signal <n0000> created at line 79
+    Found 9-bit comparator lessequal for signal <n0006> created at line 95
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<255:255>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<255:254>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<253:253>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<253:253>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<253:253>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<253:253>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<253:249>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<248:248>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<248:244>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<243:243>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    WARNING:Xst:2404 -  FFs/Latches <packet_data<243:84>> (without init value) have a constant value of 0 in block <uart_packet_transmitter>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 113 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <uart_packet_transmitter> synthesized.
+
+Synthesizing Unit <CPU>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\CPU.v".
+        UUID = 0
+        NAME = "\0"
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 67: Output port <out6> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 67: Output port <out7> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 68: Output port <out7> of the instance <Decoder3_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 69: Output port <out7> of the instance <Decoder3_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 85: Output port <output_always> of the instance <RegisterPlus_18> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\CPU.v" line 86: Output port <output_always> of the instance <RegisterPlus_19> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <cmd_addr>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <CPU> synthesized.
+
+Synthesizing Unit <TC_Splitter8_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v".
+        UUID = 64'b0001100000101000111100111000101101101110011010011010100010100011
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Splitter8_1> synthesized.
+
+Synthesizing Unit <TC_Decoder3_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Decoder3.v".
+        UUID = 64'b0010110110011000100011100010000001010101001110001000111010111110
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Decoder3_1> synthesized.
+
+Synthesizing Unit <TC_Decoder3_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Decoder3.v".
+        UUID = 64'b0001110010110100011111101101000000001111011011000010011010000110
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Decoder3_2> synthesized.
+
+Synthesizing Unit <TC_Switch_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000010010000011001010101000000000000010010111010011101010111110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_1> synthesized.
+
+Synthesizing Unit <TC_Mux_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Mux.v".
+        UUID = 64'b0000101000001011101011011100000011110110011011100110111111101100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Mux_1> synthesized.
+
+Synthesizing Unit <TC_Counter>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Counter.v".
+        UUID = 64'b0010010010111110110001010011100000110101100011100001011100011111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+        count = 8'b00000001
+    Found 8-bit register for signal <value>.
+    Found 8-bit register for signal <out>.
+    Found 8-bit adder for signal <in[7]_GND_11_o_add_1_OUT> created at line 26.
+    Found 8-bit adder for signal <value[7]_GND_11_o_add_2_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Counter> synthesized.
+
+Synthesizing Unit <TC_Mux_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Mux.v".
+        UUID = 64'b0011100110110110111101100101110000101000100000101011000011010110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Mux_2> synthesized.
+
+Synthesizing Unit <TC_Switch_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011010111110110001110011110110010101011100101000010000101110101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_2> synthesized.
+
+Synthesizing Unit <TC_Not_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0010101111001001111010011110100100101000010110110001111010001001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Not_1> synthesized.
+
+Synthesizing Unit <TC_Switch_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000010011010010010110000110011010100000010011100011101011111100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_3> synthesized.
+
+Synthesizing Unit <DEC>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v".
+        UUID = 64'b0000011111001001111001110111011110010101010000010110111100001101
+        NAME = "\0"
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out0> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out1> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out2> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out3> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out4> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\DEC.v" line 28: Output port <out5> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <DEC> synthesized.
+
+Synthesizing Unit <TC_Splitter8_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v".
+        UUID = 64'b0000110010110010110101011111110111111001100111111101011110011110
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Splitter8_2> synthesized.
+
+Synthesizing Unit <TC_Nor>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Nor.v".
+        UUID = 64'b0000101101011010110001010010001110101010010000000101101110010000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Nor> synthesized.
+
+Synthesizing Unit <TC_And_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_And.v".
+        UUID = 64'b0011001101011110010110111111101011000111001011011110111000111110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_And_1> synthesized.
+
+Synthesizing Unit <TC_Xor_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Xor.v".
+        UUID = 64'b0000110000101011110101001010001100111001000110110011101110111010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+Unit <TC_Xor_1> synthesized.
+
+Synthesizing Unit <TC_Xor_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Xor.v".
+        UUID = 64'b0010100100001101101011101011001110110110010100011101011111001101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+Unit <TC_Xor_2> synthesized.
+
+Synthesizing Unit <TC_And_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_And.v".
+        UUID = 64'b0000110110110010110101101000110101011000100010101010000010010010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_And_2> synthesized.
+
+Synthesizing Unit <TC_And_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_And.v".
+        UUID = 64'b0001101110110111111100001101111001100000001110110100001010000010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_And_3> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v".
+        UUID = 64'b0010110001110100101011100010000101000011110010011011101011110001
+        NAME = "\0"
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 72: Output port <out3> of the instance <Splitter8_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 72: Output port <out4> of the instance <Splitter8_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 72: Output port <out5> of the instance <Splitter8_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 72: Output port <out6> of the instance <Splitter8_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 72: Output port <out7> of the instance <Splitter8_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 81: Output port <out6> of the instance <Decoder3_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 81: Output port <out7> of the instance <Decoder3_19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 86: Output port <co> of the instance <Add8_24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\ALU.v" line 87: Output port <co> of the instance <Add8_25> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <TC_Or_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0010001000111100000101011001011101001001111111010010011100011001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Or_1> synthesized.
+
+Synthesizing Unit <TC_Not_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0011010111001010001101101000000010110000010111000111100101000011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_2> synthesized.
+
+Synthesizing Unit <TC_Not_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0010001111111001101011010100111100000100011010000111110101010000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_3> synthesized.
+
+Synthesizing Unit <TC_Or_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0001010011001110101110000001100110001001100111111001011001011111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Or_2> synthesized.
+
+Synthesizing Unit <TC_Not_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0011101000111100111000101101111101011110101010011100001011101001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_4> synthesized.
+
+Synthesizing Unit <TC_Or_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0000111110101011010111010101001110111111001001110001110010111011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Or_3> synthesized.
+
+Synthesizing Unit <TC_Not_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0000001111111110010100110110111000111001011000001100111110100101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_5> synthesized.
+
+Synthesizing Unit <TC_Not_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0010010100100011110100101100101000010000100001011011111001000011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_6> synthesized.
+
+Synthesizing Unit <TC_Not_7>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0000001011000111011111010001000010011100110000101111000111100100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Not_7> synthesized.
+
+Synthesizing Unit <TC_Or_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0001110111010010010101101110011111010010101001100011011101000101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	no macro.
+Unit <TC_Or_4> synthesized.
+
+Synthesizing Unit <TC_Splitter8_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v".
+        UUID = 64'b0000101010111110011100100100000110001111011110011000110111000010
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Splitter8_3> synthesized.
+
+Synthesizing Unit <TC_Switch_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0001001001110001101010110011011000100001011010101100100100000111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_4> synthesized.
+
+Synthesizing Unit <TC_Switch_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010100100001001110000100100000110100000100001111110110010011111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_5> synthesized.
+
+Synthesizing Unit <TC_Switch_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011101001001101111111001111000010000101110101000010010111000111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_6> synthesized.
+
+Synthesizing Unit <TC_Switch_7>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010000100000010011111011110010001100000101101111111011111110000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_7> synthesized.
+
+Synthesizing Unit <TC_Switch_8>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011011100010001111110010001110011010000100100010001110100100010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_8> synthesized.
+
+Synthesizing Unit <TC_Switch_9>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011000100100001110000101000001001101110100110010111110101011100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_9> synthesized.
+
+Synthesizing Unit <TC_Switch_10>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011111111011110001110001101001100010000011011000111011110101001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_10> synthesized.
+
+Synthesizing Unit <TC_Switch_11>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000100000101010000110001101111100101010010010010111001110111001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_11> synthesized.
+
+Synthesizing Unit <TC_Decoder3_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Decoder3.v".
+        UUID = 64'b0000001111010100000010011000010000110011101111011011011011001100
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Decoder3_3> synthesized.
+
+Synthesizing Unit <TC_Switch_12>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010000000100111111110111011001011111101100000001101110101101111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_12> synthesized.
+
+Synthesizing Unit <TC_Switch_13>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011001010011001010100111000101110000111000011111111110010001001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_13> synthesized.
+
+Synthesizing Unit <TC_Switch_14>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011101000111011111110000000101000001111000111111000100100000000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_14> synthesized.
+
+Synthesizing Unit <TC_Switch_15>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010100001010011100000011010011101000101101111110000000100010101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_15> synthesized.
+
+Synthesizing Unit <TC_Add_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Add.v".
+        UUID = 64'b0010111000101100000000100000100001010100111011100010111000101011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 9-bit adder for signal <n0004> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <TC_Add_1> synthesized.
+
+Synthesizing Unit <TC_Add_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Add.v".
+        UUID = 64'b0000111111001101100001110100001110101000000011111110111001011111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 9-bit adder for signal <n0004> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <TC_Add_2> synthesized.
+
+Synthesizing Unit <TC_Switch_16>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010010011001111101111001001111100110111001000000100010000010111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_16> synthesized.
+
+Synthesizing Unit <TC_Switch_17>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0001000000100000101100100111011010001111010100100100100111100110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_17> synthesized.
+
+Synthesizing Unit <TC_Switch_18>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000100110011100010101101100010011110110111110101111100010111010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_18> synthesized.
+
+Synthesizing Unit <TC_Neg>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Neg.v".
+        UUID = 64'b0011101011000110110100100111001111011000100100011100011001100101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit subtractor for signal <out> created at line 6.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <TC_Neg> synthesized.
+
+Synthesizing Unit <TC_Switch_19>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000100111001101110100110111110011100110011111000110101100001111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_19> synthesized.
+
+Synthesizing Unit <TC_Switch_20>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011010111011011100000110100111110011100000101000110101000011110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_20> synthesized.
+
+Synthesizing Unit <TC_Switch_21>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010001100110101100000110100001100101010100110001011010110000110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_21> synthesized.
+
+Synthesizing Unit <COND>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v".
+        UUID = 64'b0010111000001111111110000101111100001001101000101101101100111000
+        NAME = "\0"
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" line 58: Output port <out3> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" line 58: Output port <out4> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" line 58: Output port <out5> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" line 58: Output port <out6> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Xiaochuan_Project\TC\turing\custom_components\COND.v" line 58: Output port <out7> of the instance <Splitter8_0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <COND> synthesized.
+
+Synthesizing Unit <TC_Splitter8_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v".
+        UUID = 64'b0011100010011110111000001000100100010110000100011001010110000111
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Splitter8_4> synthesized.
+
+Synthesizing Unit <TC_Decoder3_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Decoder3.v".
+        UUID = 64'b0010011100110110011101110001101111011100100110011000110100001111
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Decoder3_4> synthesized.
+
+Synthesizing Unit <TC_Splitter8_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Splitter8.v".
+        UUID = 64'b0000000101011111110100100010010101111111010001000001001011000101
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <TC_Splitter8_5> synthesized.
+
+Synthesizing Unit <TC_Or3_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or3.v".
+        UUID = 64'b0001000100011111101101111011010101001001101111001111100011111110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or3_1> synthesized.
+
+Synthesizing Unit <TC_Or3_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or3.v".
+        UUID = 64'b0010010101001011000100000111100101011011011010010101110100001001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or3_2> synthesized.
+
+Synthesizing Unit <TC_Or_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0001100000111011000111111111010111111000011111110101110001011000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or_5> synthesized.
+
+Synthesizing Unit <TC_Or3_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or3.v".
+        UUID = 64'b0011000100000111011110011010100101001110101011110001100110000101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or3_3> synthesized.
+
+Synthesizing Unit <TC_Not_8>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0000101111100101111100111000010111000001100101110111011001010010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Not_8> synthesized.
+
+Synthesizing Unit <TC_Switch_22>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011110011000001101001100011000110101101110110111111010100011111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_22> synthesized.
+
+Synthesizing Unit <TC_Switch_23>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000111010001001101010110100101010101111110010001010111001111100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_23> synthesized.
+
+Synthesizing Unit <TC_Or_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0001111011100111000100001111010110110100100000111000000001101010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or_6> synthesized.
+
+Synthesizing Unit <TC_Switch_24>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011101011110011101001100011100111010101101010110001010101111010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_24> synthesized.
+
+Synthesizing Unit <TC_Switch_25>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011110101110010100010001100101111111011110000101010101011100010
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_25> synthesized.
+
+Synthesizing Unit <TC_Constant_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0001011000111110100111000110100110101110100110101010001000010101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_1> synthesized.
+
+Synthesizing Unit <TC_Constant_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0010110001011110011111100000011111000011011101010101001011011011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b0
+    Summary:
+	no macro.
+Unit <TC_Constant_2> synthesized.
+
+Synthesizing Unit <TC_Switch_26>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000001001001010110011100010010100100100010000011110101001101101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_26> synthesized.
+
+Synthesizing Unit <TC_Switch_27>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011011011110000101000010100011010101000100100001010010001000001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_27> synthesized.
+
+Synthesizing Unit <TC_Or_7>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Or.v".
+        UUID = 64'b0010000000101001011101010010100111100110011111100001011101110110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Or_7> synthesized.
+
+Synthesizing Unit <TC_Switch_28>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0001000000100100000101011111100100111100100011110100100000101100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_28> synthesized.
+
+Synthesizing Unit <TC_Switch_29>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000101010010010000100111101110010110011100010100001010110110011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_29> synthesized.
+
+Synthesizing Unit <TC_And_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_And.v".
+        UUID = 64'b0011000001001010100110001000000101000010101111000001111011111110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_And_4> synthesized.
+
+Synthesizing Unit <TC_Not_9>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Not.v".
+        UUID = 64'b0010110010000011000101101011011111100001110111110110101101001000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+    Summary:
+	no macro.
+Unit <TC_Not_9> synthesized.
+
+Synthesizing Unit <RegisterPlus_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0001101111110010100010101000110010110011010101101110010000110101
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_1> synthesized.
+
+Synthesizing Unit <TC_Register_1>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0001101111110010100010101000110010110011010101101110010000110100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_1> synthesized.
+
+Synthesizing Unit <TC_Constant_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0001101111110010100010101000110010110011010101101110010000110111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_3> synthesized.
+
+Synthesizing Unit <TC_Switch_30>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010101000111011110111100000001010011101100110001100011001111011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_30> synthesized.
+
+Synthesizing Unit <RegisterPlus_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0011110011111010010101001101111001000000110011101111111001100111
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_2> synthesized.
+
+Synthesizing Unit <TC_Register_2>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0011110011111010010101001101111001000000110011101111111001100110
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_2> synthesized.
+
+Synthesizing Unit <TC_Constant_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0011110011111010010101001101111001000000110011101111111001100101
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_4> synthesized.
+
+Synthesizing Unit <TC_Switch_31>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000110100110011000000000101000001101110000000001101110000101001
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_31> synthesized.
+
+Synthesizing Unit <RegisterPlus_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0000110001110110011110010000011000110001101011000110000001000001
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_3> synthesized.
+
+Synthesizing Unit <TC_Register_3>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0000110001110110011110010000011000110001101011000110000001000000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_3> synthesized.
+
+Synthesizing Unit <TC_Constant_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0000110001110110011110010000011000110001101011000110000001000011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_5> synthesized.
+
+Synthesizing Unit <TC_Switch_32>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0011110110111111001011011000100000011111011000100100001000001111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_32> synthesized.
+
+Synthesizing Unit <RegisterPlus_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0010100010001101111110011111101000100001101111100011111010101001
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_4> synthesized.
+
+Synthesizing Unit <TC_Register_4>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0010100010001101111110011111101000100001101111100011111010101000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_4> synthesized.
+
+Synthesizing Unit <TC_Constant_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0010100010001101111110011111101000100001101111100011111010101011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_6> synthesized.
+
+Synthesizing Unit <TC_Switch_33>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0001100101000100101011010111010000001111011100000001110011100111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_33> synthesized.
+
+Synthesizing Unit <RegisterPlus_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0001110101110011010110011011111101000011100001011010010101001010
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_5> synthesized.
+
+Synthesizing Unit <TC_Register_5>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0001110101110011010110011011111101000011100001011010010101001011
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_5> synthesized.
+
+Synthesizing Unit <TC_Constant_7>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0001110101110011010110011011111101000011100001011010010101001000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_7> synthesized.
+
+Synthesizing Unit <TC_Switch_34>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0010110010111010000011010011000101101101010010111000011100000100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_34> synthesized.
+
+Synthesizing Unit <RegisterPlus_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\custom_components\RegisterPlus.v".
+        UUID = 64'b0011110110110011111010010110100101011011011111100111101111110110
+        NAME = "\0"
+    Summary:
+	no macro.
+Unit <RegisterPlus_6> synthesized.
+
+Synthesizing Unit <TC_Register_6>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Register.v".
+        UUID = 64'b0011110110110011111010010110100101011011011111100111101111110111
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Found 8-bit register for signal <value>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TC_Register_6> synthesized.
+
+Synthesizing Unit <TC_Constant_8>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Constant.v".
+        UUID = 64'b0011110110110011111010010110100101011011011111100111101111110100
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000000001
+        value = 1'b1
+    Summary:
+	no macro.
+Unit <TC_Constant_8> synthesized.
+
+Synthesizing Unit <TC_Switch_35>.
+    Related source file is "F:\Xiaochuan_Project\TC\turing\builtin_components\TC_Switch.v".
+        UUID = 64'b0000110001111010101111011110011101110101101100000101100110111000
+        NAME = "\0"
+        BIT_WIDTH = 64'b0000000000000000000000000000000000000000000000000000000000001000
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <TC_Switch_35> synthesized.
+
+Synthesizing Unit <uart_data_processor>.
+    Related source file is "F:\Xiaochuan_Project\TC\src\uart_process.v".
+        CLK_FREQ = 50000000
+        BAUD_RATE = 115200
+        BIT_PERIOD = 434
+        HEADER = 8'b11111110
+        TRAILER = 8'b11111111
+        IDLE = 3'b000
+        WAIT_HEADER = 3'b001
+        RX_DATA = 3'b010
+        WAIT_TRAILER = 3'b011
+        RX_COMPLETE = 3'b100
+        SEND_RST = 3'b101
+        SEND_DONE = 3'b110
+    Found 1-bit register for signal <tx_reg>.
+    Found 1-bit register for signal <tx_ready_reg>.
+    Found 3-bit register for signal <rx_sync>.
+    Found 9-bit register for signal <rx_bit_cnt>.
+    Found 9-bit register for signal <tx_bit_cnt>.
+    Found 4-bit register for signal <rx_state>.
+    Found 4-bit register for signal <tx_state>.
+    Found 8-bit register for signal <rx_shift_reg>.
+    Found 8-bit register for signal <tx_shift_reg>.
+    Found 8-bit register for signal <data_cnt>.
+    Found 8-bit register for signal <uart_tx_data>.
+    Found 3-bit register for signal <rx_data_cnt>.
+    Found 3-bit register for signal <tx_data_cnt>.
+    Found 3-bit register for signal <current_state>.
+    Found 1-bit register for signal <rx_valid_reg>.
+    Found 1-bit register for signal <uart_tx_valid>.
+    Found 2048-bit register for signal <n0385[2047:0]>.
+    Found finite state machine <FSM_1> for signal <rx_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_50m (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk_50m (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk_50m (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 101                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <rx_data_cnt[2]_GND_105_o_add_14_OUT> created at line 106.
+    Found 3-bit adder for signal <tx_data_cnt[2]_GND_105_o_add_50_OUT> created at line 184.
+    Found 8-bit adder for signal <data_cnt[7]_GND_105_o_add_355_OUT> created at line 319.
+    Found 9-bit subtractor for signal <GND_105_o_GND_105_o_sub_9_OUT<8:0>> created at line 99.
+    Found 9-bit subtractor for signal <GND_105_o_GND_105_o_sub_47_OUT<8:0>> created at line 176.
+    Found 8-bit 256-to-1 multiplexer for signal <mem_index[7]_memory[255][7]_wide_mux_373_OUT> created at line 349.
+    Found 9-bit 4-to-1 multiplexer for signal <_n0793> created at line 158.
+    Found 9-bit 4-to-1 multiplexer for signal <_n0813> created at line 80.
+    Found 8-bit comparator greater for signal <n0090> created at line 242
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 2111 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 279 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
+Unit <uart_data_processor> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 14
+ 20-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 2
+# Registers                                            : 35
+ 1-bit register                                        : 9
+ 20-bit register                                       : 1
+ 2048-bit register                                     : 1
+ 24-bit register                                       : 1
+ 3-bit register                                        : 4
+ 5-bit register                                        : 1
+ 64-bit register                                       : 1
+ 8-bit register                                        : 14
+ 9-bit register                                        : 3
+# Comparators                                          : 4
+ 20-bit comparator lessequal                           : 1
+ 24-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 344
+ 1-bit 2-to-1 multiplexer                              : 16
+ 1-bit 8-to-1 multiplexer                              : 1
+ 20-bit 2-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 307
+ 8-bit 256-to-1 multiplexer                            : 1
+ 9-bit 2-to-1 multiplexer                              : 9
+ 9-bit 4-to-1 multiplexer                              : 2
+# Logic shifters                                       : 1
+ 504-bit shifter logical right                         : 1
+# FSMs                                                 : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_1> in Unit <u_uart_transmitter> is equivalent to the following 16 FFs/Latches, which will be removed : <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_3> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_5> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_7> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_8> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_10> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_12> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_14> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_16>
+   <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_18> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_21> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_23> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_25> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_27> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_28> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_30> <packet_data> 
+INFO:Xst:2261 - The FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_0> in Unit <u_uart_transmitter> is equivalent to the following 15 FFs/Latches, which will be removed : <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_2> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_4> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_6> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_9> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_11> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_13> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_15> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_17>
+   <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_19> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_20> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_22> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_24> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_26> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_29> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_31> 
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_0> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_57> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_58> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_59> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_60> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_61> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_62> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_63> (without init value) has a constant value of 0 in block <u_uart_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uart_tx_data_0> (without init value) has a constant value of 0 in block <u_uart_processor>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <clock_divider_50m_to_2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <clock_divider_50m_to_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_data_processor>.
+The following registers are absorbed into counter <rx_data_cnt>: 1 register on signal <rx_data_cnt>.
+The following registers are absorbed into counter <tx_data_cnt>: 1 register on signal <tx_data_cnt>.
+Unit <uart_data_processor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_packet_transmitter>.
+The following registers are absorbed into counter <baud_counter>: 1 register on signal <baud_counter>.
+The following registers are absorbed into counter <timer_20ms>: 1 register on signal <timer_20ms>.
+Unit <uart_packet_transmitter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 3-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 5
+ 20-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 2262
+ Flip-Flops                                            : 2262
+# Comparators                                          : 4
+ 20-bit comparator lessequal                           : 1
+ 24-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2151
+ 1-bit 2-to-1 multiplexer                              : 2080
+ 1-bit 256-to-1 multiplexer                            : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 48
+ 9-bit 2-to-1 multiplexer                              : 8
+ 9-bit 4-to-1 multiplexer                              : 2
+# Logic shifters                                       : 1
+ 504-bit shifter logical right                         : 1
+# FSMs                                                 : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_0> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_2> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_4> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_6> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_9> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_11> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_13> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_15> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_17> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_19> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_20> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_22> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_24> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_26> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_29> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_31> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uart_tx_data_0> (without init value) has a constant value of 0 in block <uart_data_processor>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_1> in Unit <uart_packet_transmitter> is equivalent to the following 16 FFs/Latches, which will be removed : <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_3> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_5> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_7> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_8> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_10> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_12> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_14> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_16>
+   <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_18> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_21> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_23> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_25> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_27> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_28> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_30> <packet_data> 
+INFO:Xst:2261 - The FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_57> in Unit <uart_packet_transmitter> is equivalent to the following 6 FFs/Latches, which will be removed : <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_58> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_59> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_60> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_61> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_62> <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_63> 
+WARNING:Xst:1710 - FF/Latch <packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_57> (without init value) has a constant value of 0 in block <uart_packet_transmitter>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_uart_transmitter/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+ 001   | 001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_uart_processor/FSM_1> on signal <rx_state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00
+ 0001  | 01
+ 0010  | 10
+ 0011  | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_uart_processor/FSM_2> on signal <tx_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00
+ 0001  | 01
+ 0010  | 11
+ 0011  | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_uart_processor/FSM_3> on signal <current_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 101   | 101
+ 010   | 010
+ 000   | 000
+ 011   | 011
+ 110   | 110
+ 100   | 100
+-------------------
+INFO:Xst:2261 - The FF/Latch <uart_tx_data_1> in Unit <uart_data_processor> is equivalent to the following 3 FFs/Latches, which will be removed : <uart_tx_data_3> <uart_tx_data_5> <uart_tx_data_7> 
+INFO:Xst:2261 - The FF/Latch <uart_tx_data_2> in Unit <uart_data_processor> is equivalent to the following 2 FFs/Latches, which will be removed : <uart_tx_data_4> <uart_tx_data_6> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <uart_packet_transmitter> ...
+
+Optimizing unit <uart_data_processor> ...
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <TC_Counter> ...
+
+Optimizing unit <TC_Register_1> ...
+
+Optimizing unit <TC_Register_2> ...
+
+Optimizing unit <TC_Register_3> ...
+
+Optimizing unit <TC_Register_4> ...
+
+Optimizing unit <TC_Register_5> ...
+
+Optimizing unit <TC_Register_6> ...
+WARNING:Xst:1710 - FF/Latch <u_uart_processor/memory_255_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_uart_processor/memory_255_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 86.
+FlipFlop CPU_inst0/cmd_addr_0 has been replicated 38 time(s)
+FlipFlop CPU_inst0/cmd_addr_1 has been replicated 36 time(s)
+FlipFlop CPU_inst0/cmd_addr_2 has been replicated 12 time(s)
+FlipFlop CPU_inst0/cmd_addr_3 has been replicated 6 time(s)
+FlipFlop u_uart_processor/data_cnt_1 has been replicated 1 time(s)
+FlipFlop u_uart_processor/data_cnt_2 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_1 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_2 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_3 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_4 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_5 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_6 has been replicated 1 time(s)
+FlipFlop u_uart_processor/rx_shift_reg_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2379
+ Flip-Flops                                            : 2379
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3838
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 24
+#      LUT3                        : 88
+#      LUT4                        : 65
+#      LUT5                        : 2121
+#      LUT6                        : 985
+#      MUXCY                       : 69
+#      MUXF7                       : 284
+#      MUXF8                       : 128
+#      VCC                         : 1
+#      XORCY                       : 69
+# FlipFlops/Latches                : 2379
+#      FDC                         : 110
+#      FDCE                        : 2097
+#      FDP                         : 8
+#      FDR                         : 116
+#      FDRE                        : 48
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 2
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2379  out of  11440    20%  
+ Number of Slice LUTs:                 3286  out of   5720    57%  
+    Number used as Logic:              3286  out of   5720    57%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3401
+   Number with an unused Flip Flop:    1022  out of   3401    30%  
+   Number with an unused LUT:           115  out of   3401     3%  
+   Number of fully used LUT-FF pairs:  2264  out of   3401    66%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    102     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_50m                            | BUFGP                  | 2215  |
+tclk/clk_2hz                       | BUFG                   | 164   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 8.857ns (Maximum Frequency: 112.911MHz)
+   Minimum input arrival time before clock: 5.662ns
+   Maximum output required time after clock: 9.193ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50m'
+  Clock period: 8.551ns (frequency: 116.945MHz)
+  Total number of paths / destination ports: 130622 / 4301
+-------------------------------------------------------------------------
+Delay:               8.551ns (Levels of Logic = 10)
+  Source:            u_uart_processor/memory_255_155 (FF)
+  Destination:       u_uart_transmitter/packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_40 (FF)
+  Source Clock:      clk_50m rising
+  Destination Clock: clk_50m rising
+
+  Data Path: u_uart_processor/memory_255_155 to u_uart_transmitter/packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_40
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.525   1.181  u_uart_processor/memory_255_155 (u_uart_processor/memory_255_155)
+     LUT6:I0->O            1   0.254   0.000  u_uart_processor/mux3_113 (u_uart_processor/mux3_113)
+     MUXF7:I1->O           1   0.175   0.000  u_uart_processor/mux3_10_f7_1 (u_uart_processor/mux3_10_f72)
+     MUXF8:I1->O           1   0.152   0.958  u_uart_processor/mux3_9_f8_0 (u_uart_processor/mux3_9_f81)
+     LUT6:I2->O            1   0.254   0.000  u_uart_processor/mux3_4 (u_uart_processor/mux3_4)
+     MUXF7:I1->O           1   0.175   0.790  u_uart_processor/mux3_3_f7 (u_uart_processor/mux3_3_f7)
+     LUT6:I4->O           17   0.250   1.437  u_uart_processor/mem_data_out<3>1 (cmd<3>)
+     LUT6:I3->O            1   0.235   0.682  CPU_inst0/wire_0<0>1 (CPU_inst0/wire_0<0>1)
+     LUT6:I5->O            2   0.254   0.726  CPU_inst0/wire_0<0>5 (CPU_inst0/wire_0<0>5)
+     LUT6:I5->O            1   0.254   0.000  CPU_inst0/Mmux_output_8bit11_G (N163)
+     MUXF7:I1->O           1   0.175   0.000  CPU_inst0/Mmux_output_8bit11 (out8<0>)
+     FDC:D                     0.074          u_uart_transmitter/packet_data_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_dummy_40
+    ----------------------------------------
+    Total                      8.551ns (2.777ns logic, 5.774ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tclk/clk_2hz'
+  Clock period: 8.857ns (frequency: 112.911MHz)
+  Total number of paths / destination ports: 634584 / 212
+-------------------------------------------------------------------------
+Delay:               8.857ns (Levels of Logic = 17)
+  Source:            CPU_inst0/cmd_addr_0_32 (FF)
+  Destination:       CPU_inst0/RegisterPlus_14/Register8_0/value_7 (FF)
+  Source Clock:      tclk/clk_2hz rising
+  Destination Clock: tclk/clk_2hz rising
+
+  Data Path: CPU_inst0/cmd_addr_0_32 to CPU_inst0/RegisterPlus_14/Register8_0/value_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.525   1.084  CPU_inst0/cmd_addr_0_32 (CPU_inst0/cmd_addr_0_32)
+     LUT6:I4->O            1   0.250   0.000  u_uart_processor/mux_1318 (u_uart_processor/mux_1318)
+     MUXF7:I1->O           1   0.175   0.000  u_uart_processor/mux_12_f7_7 (u_uart_processor/mux_12_f78)
+     MUXF8:I1->O           1   0.152   0.958  u_uart_processor/mux_11_f8_1 (u_uart_processor/mux_11_f82)
+     LUT6:I2->O            1   0.254   0.000  u_uart_processor/mux_6 (u_uart_processor/mux_6)
+     MUXF7:I0->O           3   0.163   0.874  u_uart_processor/mux_4_f7 (u_uart_processor/mux_4_f7)
+     LUT6:I4->O           13   0.250   1.326  u_uart_processor/mem_data_out<0>1_2 (u_uart_processor/mem_data_out<0>1_1)
+     LUT6:I3->O            1   0.235   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_lut<0> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<0> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<1> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<2> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<3> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<4> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<5> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<6> (CPU_inst0/ALU_12/Add8_24/Madd_n0004_cy<6>)
+     XORCY:CI->O           1   0.206   0.790  CPU_inst0/ALU_12/Add8_24/Madd_n0004_xor<7> (CPU_inst0/ALU_12/wire_15<7>)
+     LUT6:I4->O            1   0.250   0.682  CPU_inst0/wire_0<7>7 (CPU_inst0/wire_0<7>7)
+     LUT6:I5->O            6   0.254   0.000  CPU_inst0/wire_0<7>8 (CPU_inst0/wire_0<7>)
+     FDRE:D                    0.074          CPU_inst0/RegisterPlus_14/Register8_0/value_7
+    ----------------------------------------
+    Total                      8.857ns (3.143ns logic, 5.714ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50m'
+  Total number of paths / destination ports: 2216 / 2216
+-------------------------------------------------------------------------
+Offset:              5.662ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       tclk/counter_0 (FF)
+  Destination Clock: clk_50m rising
+
+  Data Path: rst_n to tclk/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O           2215   0.255   2.939  rst_n_inv1_INV_0 (rst_n_inv)
+     FDC:CLR                   0.459          tclk/counter_0
+    ----------------------------------------
+    Total                      5.662ns (2.042ns logic, 3.620ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50m'
+  Total number of paths / destination ports: 5 / 3
+-------------------------------------------------------------------------
+Offset:              9.193ns (Levels of Logic = 2)
+  Source:            u_uart_processor/current_state_FSM_FFd1 (FF)
+  Destination:       led (PAD)
+  Source Clock:      clk_50m rising
+
+  Data Path: u_uart_processor/current_state_FSM_FFd1 to led
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q           2126   0.525   3.143  u_uart_processor/current_state_FSM_FFd1 (u_uart_processor/current_state_FSM_FFd1)
+     LUT3:I0->O          165   0.235   2.378  led1 (led_OBUF)
+     OBUF:I->O                 2.912          led_OBUF (led)
+    ----------------------------------------
+    Total                      9.193ns (3.672ns logic, 5.521ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_50m
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50m        |    8.551|         |         |         |
+tclk/clk_2hz   |    8.605|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tclk/clk_2hz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50m        |   10.059|         |         |         |
+tclk/clk_2hz   |    8.857|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.38 secs
+ 
+--> 
+
+Total memory usage is 4591012 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   94 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
+
